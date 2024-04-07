@@ -288,6 +288,12 @@ select {
 
   main > section:nth-child(1) {
     flex-direction: row;
-    width: auto;
+    width: 1200px;
+    margin: auto;
+  }
+
+  main > section:nth-child(2) {
+    width: 1200px;
+    margin: auto;
   }
 }
