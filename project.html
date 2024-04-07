@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./project/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="./project/svg/pokedex.svg"
+      type="image/x-icon"
+    />
+    <script type="module" src="./project/scripts/main.js" defer></script>
+    <title>Pokedex</title>
+  </head>
+  <body>
+    <nav>
+      <ul id="menu">
+        <li><a id="toggleMenu">&equiv;</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="w01-task.html">W1 Task</a></li>
+        <li><a href="w03-task.html">W3 Task</a></li>
+        <li><a href="w04-task.html">W4 Task</a></li>
+        <li><a href="w05-task.html">W5 Task</a></li>
+        <li><a href="project.html" class="active">Project</a></li>
+      </ul>
+    </nav>
+    <header>
+      <h1>Project: Pokedex</h1>
+    </header>
+    <main>
+      <section>
+        <div>
+          <label for="inputName">Name:</label>
+          <input
+            class="input"
+            name="text"
+            placeholder="Search..."
+            type="search"
+            id="inputName"
+          />
+        </div>
+        <div>
+          <label for="selectType">Type:</label>
+          <select id="selectType">
+            <option value="" selected>All</option>
+          </select>
+        </div>
+        <div>
+          <label for="selectSort">Sort:</label>
+          <select id="selectSort">
+            <option value="a-z" selected>A-Z</option>
+            <option value="z-a">Z-A</option>
+          </select>
+        </div>
+        <div>
+          <label for="selectShow">Show:</label>
+          <select id="selectShow">
+            <option value="10" selected>10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="500">500</option>
+            <option value="1000">1000</option>
+          </select>
+        </div>
+      </section>
+      <section id="cards-container"></section>
+    </main>
+  </body>
+</html>

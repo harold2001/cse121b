@@ -1,0 +1,293 @@
+/* Universal Selector */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HTML Selectors */
+body {
+  font-family: 'Roboto', Helvetica, sans-serif;
+}
+
+nav {
+  background-color: black;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+nav ul li {
+  flex: 1 1 auto;
+}
+
+nav ul li:first-child {
+  display: block;
+  font-size: 2rem;
+}
+
+nav ul li:first-child a {
+  padding: 1px 10px;
+}
+
+nav ul li {
+  display: none;
+  list-style: none;
+  margin: 10px;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+nav ul li a:hover {
+  background-color: #efefef;
+  color: black;
+}
+
+h1 {
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  margin: 1rem 0 0.5rem;
+}
+
+header {
+  margin-top: 70px;
+}
+
+main {
+  padding-bottom: 20px;
+}
+
+main > section:nth-child(1) {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  width: 300px;
+  margin: auto;
+}
+
+main > section:nth-child(1) > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+main > section:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.3rem;
+  position: relative;
+  z-index: -100;
+}
+
+label {
+  display: inline-block;
+  width: 30%;
+}
+
+input,
+select {
+  width: 65%;
+  background-color: #f5f5f5;
+  outline: none;
+  border: none;
+  max-width: 190px;
+  color: #242424;
+  padding: 0.15rem 0.5rem;
+  min-height: 40px;
+  border-radius: 4px;
+  line-height: 1.15;
+  box-shadow: 0px 10px 20px -18px;
+}
+
+input:focus {
+  border-bottom: 2px solid #5b5fc7;
+  border-radius: 4px 4px 2px 2px;
+}
+
+input:hover {
+  outline: 1px solid lightgrey;
+}
+
+select {
+  padding: 8px;
+  cursor: pointer;
+}
+
+/* Ids Selectors */
+#loader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+#loader > img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+  animation: spin 0.5s infinite linear;
+  transition: 0.2s ease all;
+}
+
+#not-found {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+#not-found > div {
+  height: 100%;
+  text-align: end;
+}
+
+#not-found > p {
+  font-size: 1.2rem;
+}
+
+#not-found > div > img {
+  height: 90%;
+  width: 90%;
+  object-fit: contain;
+}
+
+/* Class Selectors */
+.active {
+  border-bottom: 1px solid yellow;
+}
+
+.card {
+  height: 350px;
+  width: 300px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  opacity: 0.9;
+  padding: 1.5rem;
+  background: linear-gradient(#fafafa, #ebebeb);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px 0 #00000041;
+  transition: 0.2s ease all;
+}
+
+.card:hover {
+  box-shadow: 0 5px 5px 0 #00000026;
+}
+
+.card-img-container {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-img-container > img {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+}
+
+.card-text-container {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-text-container > span {
+  color: #353535;
+  font-size: 0.8rem;
+  text-align: start;
+}
+
+.card-text-container > p {
+  font-size: 1.6rem;
+  text-transform: capitalize;
+}
+
+.card-types-container {
+  font-size: 0.9rem;
+  display: flex;
+  gap: 0.4rem;
+  text-transform: capitalize;
+}
+
+.card-types-container span {
+  background-color: yellowgreen;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Media Queries */
+@media only screen and (min-width: 32.5em) {
+  nav ul {
+    flex-direction: row;
+  }
+
+  nav ul li:first-child {
+    display: none;
+  }
+
+  nav ul li {
+    display: block;
+  }
+
+  #loader > img {
+    width: 20%;
+    height: 20%;
+    object-fit: contain;
+    animation: spin 0.5s infinite linear;
+  }
+
+  #cards-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  main > section:nth-child(1) {
+    flex-direction: row;
+    width: auto;
+  }
+}
